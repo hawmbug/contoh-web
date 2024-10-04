@@ -1,0 +1,140 @@
+/* Reset Margin Dan Padding */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Bagian background */
+nav {
+  width: 30vw;
+  margin-top: -80px;
+  padding: 0 20px;
+  position: absolute;
+  z-index: 1; /* Menetapkan z-index untuk menempatkan di atas video */
+}
+
+nav img {
+  width: 100%;
+  height: auto;
+}
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+video {
+  max-width: 100%;
+  max-height: auto;
+  transform: scaleX(-1);
+  display: block;
+}
+
+/* bagian form */
+.form-container {
+  height: 100vh;
+  min-width: 400px;
+  position: absolute;
+  margin-left: 900px;
+  background-color: transparent;
+  backdrop-filter: blur(4px);
+  position: absolute;
+  z-index: 2;
+  border-left: 3px azure solid;
+  border-right: 3px azure solid;
+}
+
+form h1 {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  padding: 10px;
+  color: azure;
+}
+label {
+  color: azure;
+}
+.input-box {
+  width: 90%;
+  height: 50px;
+  margin: 30px 0;
+  position: relative;
+}
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background-color: azure;
+  border-radius: 15px;
+  margin-left: 15px;
+  padding: 20px;
+  border-color: azure;
+  border-style: none;
+}
+.input-box input::placeholder {
+  color: black;
+}
+.input-box i {
+  position: absolute;
+  right: 0;
+  margin-top: -35px;
+  color: black;
+}
+.forget a {
+  text-decoration: none;
+  color: azure;
+}
+.forget {
+  text-align: center;
+}
+.forget input {
+  width: 10px;
+}
+
+.btn {
+  width: 90%;
+  height: 30px;
+  border-radius: 15px;
+  margin-left: 15px;
+  margin-top: 15px;
+  background-color: azure;
+  border-style: none;
+}
+input[type="checkbox"],
+label {
+  width: 20px; /* Ganti dengan lebar yang diinginkan */
+  height: 20px; /* Ganti dengan tinggi yang diinginkan */
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+@media only screen and (min-width: 1080px) {
+  nav {
+    width: 20vw;
+    margin-top: -50px;
+    padding: 0 20px;
+    position: absolute;
+    z-index: 1; /* Menetapkan z-index untuk menempatkan di atas video */
+  }
+
+  .form-container {
+    margin-left: 1000px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav,
+  nav img {
+    display: none;
+  }
+  body {
+    background-color: grey;
+  }
+  video {
+    display: none;
+  }
+  .form-container {
+    margin: 0;
+    width: 100%;
+    z-index: 1;
+  }
+}
